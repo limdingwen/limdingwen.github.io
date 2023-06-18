@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Anything Also Cam
+        </title>
+        <link rel="stylesheet" href="/static/main.css">
+    </head>
+    <body>
+		<header>
+	<nav>
+		<ul>
+			<li><a href="/"><b>Lim Ding Wen</b></a></li>
+			<li><a href="/projects">Projects</a></li>
+			<li><a href="/tutorials">Tutorials</a></li>
+			<li><a href="/blog">Blog</a></li>
+		</ul>
+	</nav>
+</header>
+
+		
+        <article class="h-entry">
+			<h1 class="p-name">Anything Also Cam! 👍</h1>
+			<link href="/" class="p-author"> 
+			<div class="e-content">
+				<section>
+					<img src="/static/aacam_promo.png" alt="A promotional picture showing a phone being used to transmit a webcam stream from a phone to a laptop running Skype." class="u-photo">
+					<p class="attrib"><cite><a href="https://pxhere.com/en/photo/1419067">Beautiful girl in Viet Nam</a> by An Min in the public domain</cite>, <cite><a href="https://techboomers.com/t/how-to-use-skype">How to Use Skype</a> by Tech Boomers under <a href="creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></cite>, <cite><a href="https://pngimg.com/image/49229">Phone in hand PNG image with transparent background</a> by pngimg.com under <a href="https://pngimg.com/license">CC BY-NC 4.0</a></cite>, <cite><a href="https://pngimg.com/image/5931">Laptop notebook PNG image image with transparent background</a> by pngimg.com under <a href="https://pngimg.com/license">CC BY-NC 4.0</a></cite> and <cite><a href="https://www.freepngimg.com/png/59015-arrow-icon-free-transparent-image-hq">Arrow Icon Free Transparent Image HQ</a> by Lydia Simmons under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></cite>.</p>
+					<p>Anything Also Cam turns your phone/tablet into a webcam for your Linux machine. You can use it with video chat programs such as Discord.</p>
+					<p>This is a lot like <a href="https://www.dev47apps.com/">DroidCam</a>, but free and libre software, runs on Linux, and doesn't just work with Android -- it works with any device that can run a Chromium browser!</p>
+					<p>However, this is still alpha software. It does not yet work with Windows or Mac, and it may have issues with some chat programs such as Telegram.</p>
+				</section>
+				<section>
+					<h3>Downloads</h3>
+					<p>There aren't any distros that package this yet, but I might try to get it on Fedora. In the meantime, you can compile from source.</p>
+					<p>Get the source tarball (<a href="/static/aacam-v0.1.0a.tar.gz">v0.1.0a</a>) or clone the git repo: <span class="code">git clone http://limdingwen.me/git/aacam.git</span></p>
+					<p>The web app that runs on the remote device can be accessed <a href="/static/aacam_sender.html" target="blank">here</a>.</p>
+				</section>
+				<section>
+					<h3>Roadmap</h3>
+					<p>Because this software was made for my personal use, I'll only add features that currently benefit myself for free. However, if you wish to see these features implemented faster, you can <a href="https://www.patreon.com/limdingwen/membership">be my patron</a> so I'll be able to take time off to work on these.</p>
+					<ul>
+						<li><span class="todo feature">Feature</span> Add Telegram support</li>
+						<li><span class="todo feature">Feature</span> Add Safari support</li>
+						<li><span class="todo feature">Feature</span> Add ability to disable video streaming</li>
+						<li><span class="todo feature">Feature</span> Add video streaming with disable to webpage.html</li>
+						<li><span class="todo feature">Feature</span> Battery indicator</li>
+						<li><span class="todo bugfix">Bugfix</span> When camera feed ends, do disconnect code in webpage.html</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Support</h3>
+					<p>There is no warranty nor guaranteed free support for this software. However, if you have any questions, you can comment <a href="#comments">below</a> or use other online forums to seek community help.</p>
+					<p>If you have a bug report, please submit it to your distro's bug tracker first.</p>
+					<p>If you have a feature request or an upstream bug report, you may comment down <a href="#comments">below</a> as well, so that it may be added into the roadmap. If you wish to commission me for a prioritised feature or bugfix, you can contact me through <a href="mailto:limdingwen@gmail.com">email</a> for a quote.</p>
+				</section>
+				<section>
+					<h3>Contributing</h3>
+					<p>Do you have a patch to contribute? Great! First, format your patch using <span class="code">git format-patch</span>. Then, copy the patch into the comment section <a href="#comments">below</a> and surround it with <span class="code">&lt;code>&lt;/code></span> blocks to prevent Disqus from messing with it.</p>
+					<p>Thank you very much for your contribution! I'll add your name to the credits. You retain the rights to your code, but by submitting, you agree to license your code under the AGPLv3 as well.</p>
+				</section>
+				<section>
+					<h3>Credits</h3>
+					<ul>
+						<li>Anything Also Cam</li>
+						<ul>
+							<li>Lim Ding Wen</li>
+						</ul>
+						<!-- Add Patreon here -->
+						<li>Third Parties</li>
+						<ul>
+							<li>The WebM Project Authors</li>
+							<li>GNOME Project</li>
+							<li>Jouni Malinen</li>
+							<li>National Institute of Standards and Technology</li>
+						</ul>
+					</ul>
+				</section>
+				<section>
+					<h3>License</h3>
+					<a href="https://www.gnu.org/licenses/agpl-3.0.en.html"><img src="/static/agpl.png" alt="GNU Affero General Public License"></a>
+					<p>More information, including third party licenses, can be found in the COPYING files bundled with the source code.</p>
+				</section>
+				<section>
+					<h3>Changelog</h3>
+					<h4>v0.1.0 Alpha</h4>
+					<p><pre>
+Lim Ding Wen (18):
+      Add connection instructions into GTK3 GUI
+      Add sender webpage
+      Add greyscale streaming
+      GUI GTK3 now uses DEBUG on start instead of INFO
+      Refactor variable names to be shorter and use "logical underscores"
+      Add colour streaming
+      Stop accept token from being printed when DEBUG is disabled
+      Rename ws_server to wsserver
+      Remove semicolons from logger macros
+      Remove OpenSSL dependency
+      Add TCP fragmentation support
+      Add vcam support for v4l2loopback
+      Use common header file for all GUI modules
+      Add error handling
+      Add ability to enter URL into webapp
+      Move GOT_CAM handshake to after camera permission dialog
+      Add styling to webpage
+      Prepare for release
+					</pre></p>
+				</section>
+				<section>
+					<h3>Extras</h3>
+					<p>There's also an abandoned Rust version for this. Get the source tarball (<a href="/static/aacam-rs-master.tar.gz">master</a>) or clone the git repo: <span class="code">git clone http://limdingwen.me/git/aacam-rs.git</span></p>
+				</section>
+				<section class="h-feed p-comments" id="comments">
+					<h3>Comments</h3>
+					<p>You may comment anonymously (just put anything into the email field, e.g. <span class="code">devnull@example.org</span>, it isn't checked). All comments are moderated and may take some time to appear. Be nice!</p>
+					<div id="disqus_thread"></div>
+					<script>
+						/**
+						*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+						*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+						var disqus_config = function () {
+						this.page.url = "http://limdingwen.me/projects/aacam.html";  // Replace PAGE_URL with your page's canonical URL variable
+						this.page.identifier = "http://limdingwen.me/projects/aacam.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+						};
+						(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = 'https://limdingwen.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+						})();
+					</script>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+				</section>
+			</div>
+        </article>
+        
+        <footer>
+	<hr>
+	<p>This page is licensed under <a class="h-license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. This means that you are allowed to repost and edit this page, as long as you attribute to Lim Ding Wen, link back to this page, and license your repost under CC BY-SA 4.0 or other compatible licenses.</p>
+	<p>This page uses the <a href="https://fonts.google.com/specimen/Nunito">Nunito</a> font by Vernon Adams, Cyreal and Jacques Le Bailly under the <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL#83afb016">SIL Open Font License</a>.</p>
+</footer>
+
+    </body>
+</html>

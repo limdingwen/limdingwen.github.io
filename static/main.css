@@ -3,6 +3,35 @@
 	src: url("/static/nunito.ttf");
 }
 
+.bugfix {
+	background: #f77;
+}
+
+.feature {
+	background: #7f7;
+}
+
+.todo {
+	border-radius: 5px;
+	padding: 0 5px;
+}
+
+.code {
+	font-family: monospace;
+	background: #ccc;
+	border-radius: 5px;
+	padding: 5px;
+	user-select: all;
+}
+
+.attrib {
+	font-size: 10px;
+}
+
+.h-entry .u-photo {
+	width: 100%;
+}
+
 article, section, footer {
 	clear: left;
 }
