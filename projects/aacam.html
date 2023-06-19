@@ -35,12 +35,11 @@
 				<section>
 					<h3>Downloads</h3>
 					<p>There aren't any distros that package this yet, but I might try to get it on Fedora. In the meantime, you can compile from source.</p>
-					<p>Get the source tarball (<a href="/static/aacam-v0.1.0a.tar.gz">v0.1.0a</a>) or clone the git repo: <span class="code">git clone http://limdingwen.me/git/aacam.git</span></p>
-					<p>The web app that runs on the remote device can be accessed <a href="/static/aacam_sender.html" target="blank">here</a>.</p>
+					<p>Get the source tarball (<a href="/static/aacam-v0.2.0a.tar.gz">v0.2.0a</a>, <a href="/static/aacam-v0.1.0a.tar.gz">v0.1.0a</a>) or clone the git repo: <span class="code">git clone http://limdingwen.me/git/aacam.git</span></p>
 				</section>
 				<section>
 					<h3>Roadmap</h3>
-					<p>Because this software was made for my personal use, I'll only add features that currently benefit myself for free. However, if you wish to see these features implemented faster, you can <a href="https://www.patreon.com/limdingwen/membership">be my patron</a> so I'll be able to take time off to work on these.</p>
+					<p>Because this software was made for my personal use, I'll only add features that currently benefit myself for free. However, if you wish to see these features implemented faster, you can <a href="https://www.patreon.com/limdingwen/membership">support me</a> so I'll be able to take time off to work on these.</p>
 					<ul>
 						<li><span class="todo feature">Feature</span> Add Telegram support</li>
 						<li><span class="todo feature">Feature</span> Add Safari support</li>
@@ -48,7 +47,6 @@
 						<li><span class="todo feature">Feature</span> Add video streaming with disable to webpage.html</li>
 						<li><span class="todo feature">Feature</span> Battery indicator</li>
 						<li><span class="todo bugfix">Bugfix</span> When camera feed ends, do disconnect code in webpage.html</li>
-						<li><span class="todo bugfix">Bugfix</span> Make sender work on HTTPS connections; in the meantime, use HTTP</li>
 						<li><span class="todo bugfix">Bugfix</span> Fix # redirect in sender</li>
 					</ul>
 				</section>
@@ -60,7 +58,7 @@
 				</section>
 				<section>
 					<h3>Contributing</h3>
-					<p>Do you have a patch to contribute? Great! First, format your patch using <span class="code">git format-patch</span>. Then, copy the patch into the comment section <a href="#comments">below</a> and surround it with <span class="code">&lt;code>&lt;/code></span> blocks to prevent Disqus from messing with it.</p>
+					<p>Do you have a patch to contribute? Great! Format your patch using <span class="code">git format-patch</span> and submit to the comments <a href="#comments">below</a>, surrounding it with <span class="code">&lt;code>&lt;/code></span> blocks to prevent Disqus from messing with it.</p>
 					<p>Thank you very much for your contribution! I'll add your name to the credits. You retain the rights to your code, but by submitting, you agree to license your code under the AGPLv3 as well.</p>
 				</section>
 				<section>
@@ -87,6 +85,16 @@
 				</section>
 				<section>
 					<h3>Changelog</h3>
+					<h4>v0.2.0 Alpha</h4>
+					<p><pre>
+Lim Ding Wen (6):
+      Change to CMake instead of a simple build script
+      Refactor
+      Additional changes for CMake
+      Use WSS instead of WS, accept HTTPS connections
+      Use IP injection via HTML serving
+      Prepare for publish
+					</pre></p>
 					<h4>v0.1.0 Alpha</h4>
 					<p><pre>
 Lim Ding Wen (18):
@@ -124,7 +132,7 @@ Lim Ding Wen (18):
 						*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
 						var disqus_config = function () {
 						this.page.url = "http://limdingwen.me/projects/aacam.html";  // Replace PAGE_URL with your page's canonical URL variable
-						this.page.identifier = "http://limdingwen.me/projects/aacam.html"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+						this.page.identifier = this.page.url // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 						};
 						(function() { // DON'T EDIT BELOW THIS LINE
 						var d = document, s = d.createElement('script');
