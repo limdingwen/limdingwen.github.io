@@ -13,6 +13,16 @@ You should have received a copy of the GNU Affero General Public License along w
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7XQ79F2KMQ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-7XQ79F2KMQ');
+		</script>
+
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
@@ -86,15 +96,32 @@ You should have received a copy of the GNU Affero General Public License along w
 			<p id="week"></p>
 			<p>in NTU</p>
 		</article>
+
+		<article style="display: none;" id="outNext">
+			<p>(Next week is <span id="nextWeek"></span>)</p>
+		</article>
 		
 		<footer>
 			<hr>
 			<p class="h-license"><a rel="license" href="https://www.gnu.org/licenses/agpl-3.0.en.html"><img src="agpl.png"></a></p>
 			<p>By <a href="https://limdingwen.me/">Lim Ding Wen</a></p>
 			<p>Get source code & send contributions <a href="https://limdingwen.me/projects/ntuweek.html">here</a></p>
-			<p id="version">Version 1.0.1</p>
+			<p id="version">Version 1.1.0</p>
 		</footer>
-		
+
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2140100443515338"
+				crossorigin="anonymous"></script>
+		<!-- NTUWeek -->
+		<ins class="adsbygoogle"
+			 style="display:block"
+			 data-ad-client="ca-pub-2140100443515338"
+			 data-ad-slot="7571324138"
+			 data-adtest="on"
+			 data-full-width-responsive="true"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
 		<script>
 			//let test = new Date("2024-01-15T05:00:00.0000+08:00");
 			let test = undefined;
@@ -137,7 +164,21 @@ You should have received a copy of the GNU Affero General Public License along w
 					return null;
 				}				
 			}
-			
+
+			function stripEmojis(str) {
+				return str.substring(2);
+			}
+
+			function setNextWeek(start, test) {
+				let testNext = new Date();
+				testNext.setDate(test.getDate() + 7);
+				let outNext = calcWeek(start, testNext);
+				if (outNext) {
+					document.getElementById("nextWeek").innerHTML = stripEmojis(outNext);
+					document.getElementById("outNext").style = "";
+				}
+			}
+
 			function setWeek(startTxt, test = new Date()) {
 				let start = parseDateStr(startTxt);
 				if (start) {
@@ -145,6 +186,7 @@ You should have received a copy of the GNU Affero General Public License along w
 					if (out) {
 						document.getElementById("week").innerHTML = out;
 						document.getElementById("out").style = "";
+						setNextWeek(start, test);
 						return true;
 					}
 				}
